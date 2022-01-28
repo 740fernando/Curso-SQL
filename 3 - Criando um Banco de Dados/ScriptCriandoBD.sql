@@ -51,3 +51,7 @@ create index departamentos on funcionarios (departamento); --  O campo departame
 create index nomes on funcionarios (nome(6)); -- Considera apenas os 6 primeiros caracteres do campo como inidice
 
 
+-- Inclua a coluna DATA_NASCIMENTO na tabela ALUNO do tipo string, de tamanho 10 caracteres;
+	alter table aluno insert into DATA_NASCIMENTO varchar(10);
+
+-- Inclua a coluna DATA_NASCIMENTO na tabela ALUNO do tipo string, de tamanho 10 caracteres;
