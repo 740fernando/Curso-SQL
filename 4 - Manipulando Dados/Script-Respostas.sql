@@ -1,3 +1,4 @@
+-- Exerc�cio 1
 -- Crie comandos SQL para inserir os dados apresentados a seguir:
 -- 
 -- Tabela TIPO:
@@ -52,7 +53,7 @@ select * from instrutor;
 select * from aluno;
 select * from CURSO;
 select * from pedido_detalhe;
-select * from pedido ;
+select * from pedido p ;
 
 -- DML
 
@@ -101,8 +102,48 @@ insert into pedido_detalhe values (5,3,170);
 insert into pedido_detalhe values (6,3,170);
 insert into pedido_detalhe values (7,4,270);
 
+-- Exerc�cio 2
 
+-- Utilizando o banco de dados criado nos m�dulos anteriores, realize as seguintes instru��es:
 
+-- Exibir todas as informa��es de todos os alunos;
+	select * from aluno a ;
 
+-- Exibir somente o t�tulo de cada curso da Softblue;
+	select c.curso from curso c ;
 
+-- Exibir somente o t�tulo e valor de cada curso da Softblue cujo pre�o seja maior que 200;
+	select c.curso,c.valor from curso c where c.valor > 200;
 
+-- Exibir somente o t�tulo e valor de cada curso da Softblue cujo pre�o seja maior que 200 e menor que 300;
+	select c.curso,c.valor from curso c where c.valor  between 200 and 300;
+
+-- Outra solu��o para o exerc�cio seria esta;
+	select c.curso,c.valor from curso c where c.valor>200 and c.valor<300;
+
+-- Exibir as informa��es da tabela PEDIDOS para os pedidos realizados entre 15/04/2010 e 18/04/2010;
+	select * from pedido p where p.datahora between '2010-04-15' and '2010-04-19';
+
+-- Outra solu��o para o exerc�cio seria esta;
+	select * from pedido p where p.datahora > '2010-04-15' and p.datahora < '2010-04-19';
+
+-- Exibir as informa��es da tabela PEDIDOS para os pedidos realizados na data de 15/04/2010;
+	select * from pedido p  where date(p.datahora) = '2010-04-15';
+
+-- Exerc�cio 3
+-- Utilizando o banco de dados criado nos m�dulos anteriores, realize as seguintes instru��es:
+	select * from aluno;
+	select * from curso;
+
+-- Altere o endere�o do aluno JOS� para 'Av. Brasil 778';
+	update aluno set aluno  = 'Jos�' where codigo = 1;
+	update aluno set endereco = 'Av. Brasil 778' where aluno = 'Jos�,';
+	
+-- Altere o e-mail do aluno CRIS para 'cristiano@softblue.com.br';
+	update aluno set email = 'cristiano@softblue.com.br' where codigo = 4;
+
+-- Aumente em 10% o valor dos cursos abaixo de 300;	
+	update curso  set valor = valor *1.1 where valor < 300;
+
+-- Altere o nome do curso de Php B�sico para Php Fundamentos;
+	update curso set curso = 'Php Fundamentos' where codigo = 4;
