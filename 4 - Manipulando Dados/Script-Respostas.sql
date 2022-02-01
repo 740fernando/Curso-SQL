@@ -1,3 +1,4 @@
+-- Exercício 1
 -- Crie comandos SQL para inserir os dados apresentados a seguir:
 -- 
 -- Tabela TIPO:
@@ -46,7 +47,7 @@
 -- 7, 4, 270
 
 
-se softblue;
+use softblue;
 
 -- DQL
 select * from tipo;
@@ -54,6 +55,7 @@ select * from instrutor;
 select * from aluno;
 select * from CURSO;
 select * from pedido_detalhe;
+select * from pedido p ;
 
 -- DML
 
@@ -82,7 +84,7 @@ insert into aluno (aluno,endereco,email) values ('Regina','Rua Salles 305','regi
 insert into aluno (aluno,endereco,email) values ('Fernando','Av. Central 30','fernando@softblue.com.br');
 
 -- PEDIDO
-select * from pedido p ;
+
 insert into pedido (codigo,aluno_codigo,datahora) values (1,2,'2010-04-15 11:23:32');
 insert into pedido (codigo,aluno_codigo,datahora) values (2,2,'2010-04-15 14:36:21');
 insert into pedido (codigo,aluno_codigo,datahora) values (3,3,'2010-04-16 11:17:45');
@@ -105,8 +107,48 @@ insert into pedido_detalhe values (5,3,170);
 insert into pedido_detalhe values (6,3,170);
 insert into pedido_detalhe values (7,4,270);
 
+-- Exercício 2
 
+-- Utilizando o banco de dados criado nos módulos anteriores, realize as seguintes instruções:
 
+-- Exibir todas as informações de todos os alunos;
+	select * from aluno a ;
 
+-- Exibir somente o título de cada curso da Softblue;
+	select c.curso from curso c ;
 
+-- Exibir somente o título e valor de cada curso da Softblue cujo preço seja maior que 200;
+	select c.curso,c.valor from curso c where c.valor > 200;
 
+-- Exibir somente o título e valor de cada curso da Softblue cujo preço seja maior que 200 e menor que 300;
+	select c.curso,c.valor from curso c where c.valor  between 200 and 300;
+
+-- Outra solução para o exercício seria esta;
+	select c.curso,c.valor from curso c where c.valor>200 and c.valor<300;
+
+-- Exibir as informações da tabela PEDIDOS para os pedidos realizados entre 15/04/2010 e 18/04/2010;
+	select * from pedido p where p.datahora between '2010-04-15' and '2010-04-19';
+
+-- Outra solução para o exercício seria esta;
+	select * from pedido p where p.datahora > '2010-04-15' and p.datahora < '2010-04-19';
+
+-- Exibir as informações da tabela PEDIDOS para os pedidos realizados na data de 15/04/2010;
+	select * from pedido p  where date(p.datahora) = '2010-04-15';
+
+-- Exercício 3
+-- Utilizando o banco de dados criado nos módulos anteriores, realize as seguintes instruções:
+	select * from aluno;
+	select * from curso;
+
+-- Altere o endereço do aluno JOSÉ para 'Av. Brasil 778';
+	update aluno set aluno  = 'José' where codigo = 1;
+	update aluno set endereco = 'Av. Brasil 778' where aluno = 'José,';
+	
+-- Altere o e-mail do aluno CRIS para 'cristiano@softblue.com.br';
+	update aluno set email = 'cristiano@softblue.com.br' where codigo = 4;
+
+-- Aumente em 10% o valor dos cursos abaixo de 300;	
+	update curso  set valor = valor *1.1 where valor < 300;
+
+-- Altere o nome do curso de Php Básico para Php Fundamentos;
+	update curso set curso = 'Php Fundamentos' where codigo = 4;
