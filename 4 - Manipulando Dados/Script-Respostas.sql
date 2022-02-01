@@ -64,7 +64,7 @@ insert into tipo (tipo) values ("Modelagem de dados");
 
 --  INSTRUTOR
 insert into instrutor (instrutor,telefone) values ('André Milani','1111-1111');
-insert into instrutor (instrutor,telefone) values ('André Milani','2222-2222');
+insert into instrutor (instrutor,telefone) values ('Carlos Tosin','2222-2222');
 
 -- Curso
 insert into curso(codigo,curso,tipo_codigo,instrutor_codigo,valor) values (1,'Java Fundamentos', 2, 2, 270);
