@@ -21,7 +21,7 @@ create table salarios
 );
 
 
--- DLL
+-- DML
 
 
 -- insert funcionarios
