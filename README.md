@@ -1,3 +1,11 @@
+## RESUMO
+
+Este curso SQL tem por objetivo ensinar os conceitos de bancos de dados e a utilização da linguagem SQL (Structured Query Language) para manipulação de dados. São abordados temas como bancos de dados, SGBD's, normalização e a linguagem SQL propriamente dita. O curso é indicado para quem nunca teve contato com esta tecnologia e também para quem já a conhece e deseja aprimorar seus conhecimentos.
+
+Também são abordados neste curso temas como controle de acesso e transações em bancos de dados. Este curso aborda a versão ANSI do SQL, que é padronizada em todos os bancos de dados, e utiliza o MySQL para por em prática os conhecimentos adquiridos nas aulas teóricas.
+
+https://www.softblue.com.br/site/curso/id/3/CURSO+SQL+COMPLETO+BASICO+AO+AVANCADO+ON+LINE+BD03
+
 #  1) Introdução a Bancos de Dados
 
 O primeiro módulo do curso de SQL oferece uma introdução ao tema de bancos de dados, suas estruturas e alguns termos técnicos utilizados nesta área de TI, além de oferecer uma visão geral sobre os principais bancos de dados disponíveis no mercado.
