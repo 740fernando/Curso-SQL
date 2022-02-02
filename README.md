@@ -25,3 +25,7 @@ Os comandos de gerenciamento de dados são abordados neste módulo, abordando co
 # 5) Relacionamentos e Visões
 
 Este módulo aborda de maneira mais aprofundada os relacionamentos entre as tabelas do banco de dados, explicando os diferentes tipos de relacionamentos e os diferentes tipos de JOINS possíveis de serem feitos entre as tabelas. A criação de visões para armazenar expressões SELECT de relacionamentos ou não também é abordada neste módulo.
+
+# 6) Funções Especiais e Subqueries
+
+Neste módulo são vistas diversas funções especiais de seleção e processamento de dados que o SQL oferece para facilitar a busca por informações no banco.
