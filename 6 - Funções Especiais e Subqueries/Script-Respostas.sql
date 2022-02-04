@@ -80,3 +80,42 @@ use softblue;
 -- Exiba os nomes dos cursos de Java da Softblue;
 
 	select c.curso from curso c where curso like '%java%'; 
+	
+
+-- Exercício 2
+
+-- Utilizando o banco de dados criado nos módulos anteriores, realize as seguintes instruções:
+
+-- Utilizando subquery, exiba uma lista com os nomes dos cursos disponibilizados pela Softblue informando para cada curso qual o seu menor valor de venda já praticado;
+		
+	select curso, (select min(valor) from pedido_detalhe pd where pd.curso_codigo = c.codigo)as menor_valor from curso c ;
+
+-- Utilizando subquery e o parâmetro IN, exiba os nomes dos cursos disponibilizados pela Softblue cujo tipo de curso seja 'Programação';
+
+	select c.curso from curso c where c.tipo_codigo in(select t.codigo from tipo t where tipo like '%Programação');
+	
+    SELECT c.curso FROM curso c WHERE c.tipo_codigo IN (SELECT t.codigo FROM TIPO t WHERE TIPO = 'Programação');
+	
+-- Utilizando subquery e o parâmetro EXISTS, exiba novamente os nomes dos cursos disponibilizados pela Softblue cujo tipo de curso seja 'Programação';
+   
+    select c.curso from curso c where exists (select t.tipo from tipo t where c.tipo_codigo =t.codigo and t.tipo='Programação');
+   
+-- Exiba uma lista com os nomes dos instrutores da Softblue e ao lado o total acumulado das vendas referente aos cursos pelo qual o instrutor é responsável;
+   
+   select i.instrutor, (select sum(pd.valor) from pedido_detalhe pd inner join curso c on pd.curso_codigo = c.codigo where c.instrutor_codigo = i.codigo) as 'Total Vendas' from instrutor i ;
+   
+-- Crie uma visão que exiba os nomes dos alunos e quanto cada um já comprou em cursos;
+  create view vw_alunos_compra 
+ 	as select a.aluno,
+ 	(
+ 		select sum(pd.valor) 
+ 		from pedido_detalhe pd 
+ 		inner join pedido p 
+ 		on pd.pedido_codigo = p.codigo 
+ 		and p.aluno_codigo=a.codigo
+ 	)
+ 	as total_de_compras 
+ 	from aluno a  ;
+ 
+  select * from vw_alunos_compra vac ;
+  
