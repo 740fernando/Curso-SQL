@@ -33,3 +33,7 @@ Neste módulo são vistas diversas funções especiais de seleção e processame
 # 7) Controle de Acesso
 
 O gerenciamento de acesso das informações existentes nos bancos de dados é abordado neste módulo, explicando as camadas de controle de acessos que existem nos principais bancos de dados.
+
+# 8) Transações (ACID)
+
+O assunto transações e as propriedades ACID são abordadas neste módulo.
