@@ -29,3 +29,7 @@ Este módulo aborda de maneira mais aprofundada os relacionamentos entre as tabe
 # 6) Funções Especiais e Subqueries
 
 Neste módulo são vistas diversas funções especiais de seleção e processamento de dados que o SQL oferece para facilitar a busca por informações no banco.
+
+# 7) Controle de Acesso
+
+O gerenciamento de acesso das informações existentes nos bancos de dados é abordado neste módulo, explicando as camadas de controle de acessos que existem nos principais bancos de dados.
