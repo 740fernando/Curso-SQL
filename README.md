@@ -37,3 +37,8 @@ O gerenciamento de acesso das informações existentes nos bancos de dados é ab
 # 8) Transações (ACID)
 
 O assunto transações e as propriedades ACID são abordadas neste módulo.
+
+
+# 9) Stored Procedures e Triggers
+
+Neste módulo serão apresentados os recursos de Stored Procedures e Triggers existentes nos principais bancos de dados.
