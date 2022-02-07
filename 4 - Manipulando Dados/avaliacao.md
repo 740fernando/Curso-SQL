@@ -1,4 +1,3 @@
-# Avaliação - Manipulando Dados
 
 
 ![image](https://user-images.githubusercontent.com/32016610/151611166-0b5246ff-a5d6-4d74-887b-55760b3f1fc1.png)
